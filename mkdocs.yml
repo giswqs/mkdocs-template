@@ -1,8 +1,11 @@
 site_name: Mkdocs Template
-
+site_description: A website template for using mkdocs
+site_author: Qiusheng Wu
 site_url: https://giswqs.github.io/mkdocs-template
 
 repo_url: https://github.com/giswqs/mkdocs-template
+
+copyright: "Copyright &copy; 2022 - 2023 Qiusheng Wu"
 
 theme:
   palette:
@@ -23,10 +26,11 @@ theme:
     repo: fontawesome/brands/github
   features:
     - navigation.instant
-    # - navigation.expand
-    # - navigation.tabs
     - search.highlight
   custom_dir: "docs/overrides"
+  font:
+    text: Google Sans
+    code: Regular
 
 plugins:
   - search
@@ -34,19 +38,26 @@ plugins:
   - git-revision-date
   - mkdocs-jupyter:
       include_source: True
-      execute: True
+      ignore_h1_titles: True
+      execute: False
+      allow_errors: false
+      ignore: ["name.ipynb"]
+      execute_ignore: "path/*.ipynb"
 
 markdown_extensions:
   - attr_list
   - toc:
       permalink: true
 
-# google_analytics:
-#   - UA-XXXXXXXX-X
-#   - auto
+extra:
+  analytics:
+    provider: google
+    property: G-XXX
 
 nav:
   - Home: index.md
+  - Notebook:
+      - template.ipynb
   - Chapter 1:
       - chapter_01/intro.ipynb
       - chapter_01/basemaps.ipynb
