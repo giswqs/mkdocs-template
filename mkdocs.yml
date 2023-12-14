@@ -42,7 +42,7 @@ plugins:
       execute: True
       allow_errors: false
       ignore: ["name.ipynb"]
-      execute_ignore: "path/*.ipynb"
+      execute_ignore: ["path/*.ipynb"]
 
 markdown_extensions:
   - attr_list
