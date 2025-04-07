@@ -5,7 +5,7 @@ site_url: https://giswqs.github.io/mkdocs-template
 
 repo_url: https://github.com/giswqs/mkdocs-template
 
-copyright: "Copyright &copy; 2022 - 2023 Qiusheng Wu"
+copyright: "Copyright &copy; 2022 - 2025 Qiusheng Wu"
 
 theme:
   palette:
@@ -49,10 +49,10 @@ markdown_extensions:
   - toc:
       permalink: true
 
-extra:
-  analytics:
-    provider: google
-    property: G-XXX
+# extra:
+#   analytics:
+#     provider: google
+#     property: G-XXX
 
 nav:
   - Home: index.md
@@ -64,6 +64,5 @@ nav:
   - Chapter 2:
       - chapter_02/colorbar.ipynb
       - chapter_02/heatmap.ipynb
-  - Blog: https://blog.gishub.org
   - YouTube Channel: https://youtube.com/@giswqs
   - Report Issues: https://github.com/giswqs/mkdocs-template/issues
