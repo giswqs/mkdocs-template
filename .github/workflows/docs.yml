@@ -22,7 +22,7 @@ jobs:
           codespell --skip=".*,.git/*,*.csv,*.geojson,*.json,*.js,*.html,*cff,*.pdf" --ignore-words-list="aci,acount,acounts,fallow,hart,hist,nd,ned,ois,wqs"
       - name: Install dependencies
         run: pip install mkdocs-material mkdocstrings mkdocs-git-revision-date-plugin mkdocs-jupyter mkdocs-pdf-export-plugin ipykernel
-      - name: depoly
+      - name: deploy
         run: mkdocs gh-deploy --force
         env:
           RUN_GITHUB_ACTION: ${{ secrets.RUN_GITHUB_ACTION }}
